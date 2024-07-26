@@ -16,7 +16,7 @@ app.use(express.static("public"));
 // Web Home Page (root)
 app.get("/", async (req,res)=>{
     try {
-        //Using axio to pull data from The MealDB API
+        //Using axios to pull data from The MealDB API
         const result = await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
         //This send the data from the API to the index.ejs then displays the index.ejs file on the browser
         res.render("index.ejs",{
